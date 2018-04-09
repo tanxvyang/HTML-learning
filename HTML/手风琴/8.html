@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!--css 样式 重叠样式-->
+	
+     <style>
+  
+   div{
+      	 height: 123px;
+      	 width: 1200px;
+         background-color: whirt;
+       /*  margin-top: 200px;
+         margin-left: auto; /*自动居中
+         margin-right: auto;
+         margin-bottom:0;
+         */
+        /*
+         margin: 100px  auto  0;/*复合写法  上 左右 下
+              当控制的方向大于三个时  建议使用符合写法*/
+
+              margin: 100px  auto 0;
+              padding: 20px;
+      }
+  
+   		div ul {
+   				width: 2000px;
+   		}
+	div ul li{
+				float: left;/*浮动 让元素横排显示  如果父级元素宽度不够 那么元素记下来   特性：会使元素脱离文档流*/
+			overflow: hidden;
+
+			  width: 185px;
+			  height: 127px;
+			  background-color: whirt;
+			  margin-right: 10px;
+			  list-style: none; 
+			  border-radius:5px;/*圆角*/
+			  transition: 0.5s   cubic-bezier(.29,1.21,.52,1.47); /* 响应时间0.5秒*/
+
+		}
+
+		/*  ：hover  伪类选择器  通过样式给*/
+
+		div ul:hover  li{ 
+				width: 108px;
+		       }
+		div ul li:hover{
+					width: 576px;
+		}
+
+  	</style>
+
+
+</head>
+		<body>
+		<!--ul  li 标签，以小黑点开头的列表-->
+	
+   <div>
+    
+     	<ul>
+           	<li><img src="images/1.jpg" alt=""></li>
+           	<li><img src="images/2.jpg" alt=""></li>
+           	<li><img src="images/3.PNG" alt=""></li>
+           	<li><img src="images/4.jpg" alt=""></li>
+           	<li><img src="images/5.jpg" alt=""></li>
+           	<li><img src="images/6.jpg" alt=""></li>
+
+    	</ul>
+
+
+   </div>
+
+
+</body>
+</html>
