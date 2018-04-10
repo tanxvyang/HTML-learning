@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Keywords"  content="">
+	<meta  name="Description" content="">
+	<title>旋转3D导航栏</title>
+
+	<style>
+		.body{margin: 0;}
+		.nav{
+			display: flex;/*弹性盒模型*/
+			width: 507px;
+			height: 300px;
+			/*background-color: ;*/
+			margin:100px  0  0  278px;
+			perspective: 1000px;/*3dz轴*/
+			
+		}
+		.tab{
+			/*display: inline-flex; /*行内盒模型*/
+			width: 200px;
+			height: 300px;
+           /* background-color:#15b1e0 ;*/
+            margin-right: 7px;
+		}
+		.content{
+		 /*	display: inline-flex;*/
+		    position: relative;/*建立坐标系*/
+		    top: 20px;
+		    left: 7px;
+			width: 260px;
+			height: 260px;
+			/*background-color: #43c1b0;
+			transform: rotateX(30deg );*/
+			transform-style: preserve-3d;/*3旋转*/
+			transition: 0.5s;/*过度：元素发生变化时的时间*/
+
+
+		}
+
+		.tab1,.tab2,.tab3{
+			width: 200px;
+			height: 100px;
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;/*文本对齐方式：居中对齐*/
+			line-height: 100px;
+		}
+
+		.tab1{
+			background-color: #06d6a0;
+		}
+		.tab2{
+			background-color: #1b9aaa;
+		}
+		.tab3{
+			background-color: pink;
+		}
+		.content1,.content2,.content3{
+			/*position: absolute;/*绝对定位*/
+			width: 260px;
+			height: 260px;
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;/*文本对齐方式：居中对齐*/
+			line-height: 260px;/*行高设置为与元素一样*/
+		}
+		.content1{
+			position: absolute;
+			background-color: #06d6a0;
+			transform:translateY(-130px)rotateX(90deg );/*旋转平面角度*/
+		}
+		.content2{
+			position: absolute;
+			background-color: #1b9aaa;
+			transform:translateZ(130px);			
+		}
+		.content3{
+			position: absolute;
+			background-color: pink;
+			transform: translateY(130px)rotateX(-90deg );
+
+		}
+/*3D坐标系  横x  斜y  竖z*/
+
+	</style>
+</head>
+<body>  
+	 <!--calss: 给元素加名字    有意义的英文单词或可辨别的英文缩写-->
+ 		<div  class="nav"> 
+			<div class="tab">	
+                 <div class="tab1">TOP</div>
+                  <div  class="tab2">FRONT</div>
+                   <div  class="tab3">BOTTOM</div>
+			</div>	
+			<div class="content">
+				<div class="content1">TOP CONTENT</div>
+				<div class="content2">FRONT CONTENT</div>
+				<div class="content3">BOTTOM CONTENT</div>
+
+				</div>	
+ 		</div>
+
+  <script src="js/jquery-3.2.1.js"></script>
+  <script > 
+  		$(".tab1").click(function(){
+  			$(".content").css("transform","rotateX(-90deg)");
+  		})
+  		$(".tab2").click(function(){
+  			$(".content").css("transform","rotateX(0deg)");
+  		})
+  		$(".tab3").click(function(){
+  			$(".content").css("transform","rotateX(90deg)");
+  		})
+
+    </script>
+</body>
+</html>
+<!--
+   普通流 
+      
+         1从上往下排
+            2 从左往右拍
+            3 一个块元素占一行
+       display:flex ;  弹性盒模型
+
+       1所有子元素都要沿着父元素的主轴排列
+
+       display:inline-block;  行内块元素
+       大小可以通过width修改
+-->
