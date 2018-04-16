@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas实例</title>
+
+</head>
+
+<body>
+
+<canvas id="myCanvas">您的浏览器不支持canvas标签</canvas>	
+
+<script type="text/javascript">//绘制一个蓝色矩形框
+  	var canvas= document.getElementById('myCanvas');
+  	var ctx= canvas.getContext('2d');
+  	ctx.fillStyle='#000099';
+  	ctx.fillRect(0,0,80,100);
+
+</script>
+
+
+
+<script type="text/javascript">// 绘制直线
+	var canvas= document.getElementById('myCanvas');//获取canvas对象
+	var ctx= canvas.getContext('2d');//获取上下文对象
+	ctx.beginPath();        		//开始一个新的绘制路径
+	ctx.moveTo(100,10);   			//定义起点坐标为（100,10）
+	ctx.lineTo(500,10);  			//定义直线终点坐标为（500，10）
+	ctx.stroke();					//沿着坐标点的路径顺序绘制直线
+	ctx.closePath();					//关闭当前的绘制路径
+</script>
+
+
+
+<script type="text/javascript">  //绘制二次曲线
+  
+  var canvas= document.getElementById('myCanvas');//获取canvas对象
+  if (canvas && canvas.getContext) {    //判断canvas对象是否为空
+  		var ctx= canvas.getContext('2d');//获取上下文对象
+		ctx.beginPath();        		//开始一个新的绘制路径
+		ctx.moveTo(100,50);   			//定义起点坐标为（10,10）
+		ctx.quadraticCurveTo(100,15,300,30); //设置二次曲线坐标
+		ctx.stroke();						//绘制路径
+  }
+
+</script>
+</body>
+</html>

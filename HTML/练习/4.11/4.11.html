@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="Keywords"  content="">
+	<meta  name="Description" content="">
+	<title>Document</title>
+
+<style>
+ 	html{height: 100%}
+ 	body{height: 100%;margin: 0;overflow: hidden;/*超出部分隐藏 滚动条隐藏*/}
+ 	ul{ margin: 0;padding: 0;list-style-type:none;  }
+ 	li{  margin: 0;padding: 0;   };
+ 	#btn{
+ 		position: fixed;
+ 		top: 30px;
+ 		left: 30px;
+ 		width: 30px;
+ 		height: 130px;
+ 		background:red;
+ 	}
+ 	#btn ul li{
+ 		width: 25px;
+ 		height: 25px;
+ 		border: 2px solid #fff;
+ 		border-radius: 50%;/*边框圆角*/
+ 		margin-bottom: 10px;
+
+
+ 	}
+ 	.item{		
+ 		width: 100%;
+ 		height: 100%;
+ 		background: #3366ff;
+ 		background-size: cover;
+ 		background-position-x:center; 
+ 	}
+ 	.active{
+ 		background: #fff;
+ 	}
+
+</style>
+
+
+
+</head>
+
+
+<body>
+
+		<div id="btn">
+			<ul>
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			</div>
+
+		<div class="item"
+			style="background-image:url(images/1.jpg);" >
+			</div>
+			<div class="item"
+			style="background-image:url(images/2.jpg);" >
+			</div>
+		
+		<div class="item"
+			style="background-image:url(images/3.jpg);" >
+			</div>
+		
+		<div class="item"
+			style="background-image:url(images/4.jpg);" >
+
+			</div>
+		
+		
+
+
+</body>
+
+<script src="js/jquery.js">  </script>
+<script src="js/jquery.mousewheel.js">  </script>
+<script>
+  	/*需求：
+  			点击按钮产生的特效*/
+  			var h=$("body").height();//获取屏幕高度
+  			var index=0
+  			$(" #btn ul  li ").click(function(){
+  				index=$(this).index();//获取点击按钮下表
+
+  				$(this).addClass("active").siblings().removeClass();
+  				$("html,body").animate({ scrollTop:index*h +" px"});
+  			});
+  			$(document).mousewheel(function(ev,dr){
+
+  				if (dr>0) {
+  					index--;
+  					if (index<0)index=3; 
+  					$("html,body").animate({ scrollTop:index*h +" px"});
+  				}else{
+  					index++;
+  					if (index>3) index=0;
+  					$("html,body").animate({ scrollTop:index*h +" px"});
+  				}
+  			});
+  				
+
+</script>
+</html>
