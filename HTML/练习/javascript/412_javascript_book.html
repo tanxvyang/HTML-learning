@@ -1,0 +1,170 @@
+<!--   javascript   
+	作用：  1。表单验证
+	 		2.动态效果   17素材库
+	 		3.服务端
+语法
+	1.js是弱类型语言
+	2.他是解释型语言
+	    程序入口，一条条读，边解释边执行
+执行区域
+		可以在HTML的任意位置
+变量定义
+ 语法
+ 	var 变量名称  =值
+ 	*window提供了一个方法  alert
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type='text/javascript'> 
+	// var i= 333;
+	// alert(i );
+	// alert(a );
+	// var  a= "333";
+	// alert(a);
+	// alert(b);
+	// var b= '333';
+	// alert(b);
+	// 
+	
+	// var c=[1,'e'];
+	// alert('c:'+c);
+	// alert(c[0]);
+	// alert(c[1]);
+	// var d = new Object();
+	
+<!--	// 数字类型 number
+// 	var num = 123;
+// 	alert( typeof(num));
+//   //字符串 string
+// 	var str ="123";
+// 	alert( typeof(str));
+// //  布尔类型 booleaan
+//   var boo =true;
+// 	alert( typeof(boo));
+// //空
+//   var nu =undefined;
+// 	alert( typeof(nu ));
+// //对象
+//   var obj =new Object;
+// 	alert( typeof(obj));
+
+-->
+<!--
+//比较类型
+// var a= null;
+// var b=undefined;
+// var c=a+0;
+// var d=b+0;
+// alert(c);
+// alert(d);//NAN not a number ,null 与 undefined 不一样的， 在数字运算中，null做 0处理；
+
+// //第一值相等 ，第二 存储空间要一致
+
+// alert(a===b);
+
+-->
+
+// 数值比较的是字面量
+// var b=[0,'e4'];
+// var c = [0,'e4'];
+// alert(b==c);
+// alert(typeof(b)); 
+// 相当于
+// var cc =(new Object()==new Object());
+// alert(c);
+// 
+
+<!--
+//boolean
+ 
+ // var boo=true;
+ // var boo1=Boolean('1');
+ // var boo1=Boolean(0);
+ // var boo1=Boolean(undefined);//除0,undefined和null外都是true
+ // alert(boo==boo1);
+-->
+
+
+//number 
+  //字符串转换成数字
+  // var abc ='abc ';
+  // var c=parseInt(abc);
+  // alert(c);
+
+
+// var  a ='1234';
+// alert(typeof(a));
+// //var b=parseInt(a);
+// //或 s
+// var b =a*1;
+// alert(b);
+
+ 
+
+ //转换为浮点类型
+ 
+ // var a= "1234.3";
+ // var  b= parseInt(a);
+ // var  b= parseFloat(a);
+ // alert(a*1);
+
+
+// var str = '123abc333';//显示123
+// var a=parseInt(str);
+// alert(a);
+// 
+// 
+// var str = 'aaa123abc333';  //显示NAN
+//  var a=parseInt(str);
+// alert(a);
+
+
+
+	// alert(NaN==NaN );  //nan和任何值都不相等  显示false
+	// alert(null==null);   //true
+	// alert(undefined==undefined);  //true
+
+
+
+//字符串
+
+// var str = "ccc";
+// var len=str.length;
+// alert (len);
+
+
+//alert 提示
+//alert('abc');
+
+//prompt
+// var  abc =prompt('你吃饭了没')；
+// alert(abc);
+
+
+//confirm()//返回的是boolean
+  // var con = confirm('你吃饱了吗？');
+  // alert(con);
+  // 
+  // 
+  var  a =prompt('小明，你吃了几个馒头？');
+  var  b =prompt('小华，你吃了几个馒头？');
+  alert("小明吃了"+a+"个");
+  alert("小华吃了"+b+"个");
+  if(a>b){
+alert('小明吃的多');
+  }else{
+  	alert('李华吃得多')
+  }
+// 
+
+	</script>
+</head>
+
+<body>
+	
+</body>
+
+</html>

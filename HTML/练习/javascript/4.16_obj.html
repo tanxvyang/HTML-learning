@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript</title>
+
+	<script>
+	var i=3;
+/*//
+	  //	Object  对象 1
+	  //1.
+	  // var a=new Object();
+
+	  // a.name="fdhvdsh";
+	  // alert(a.name);
+
+	  */
+/*//2.
+	  var a= {
+	  	"name":"dffsd",
+	  	
+	  };
+	  a.sex ="nan";
+	  alert(a.sex);*/
+/*
+//3.
+         person();
+          alert(typeof(person));
+
+	  function person(){//功能块
+	    this.name = "chengyv";
+	    this.sex="nv";
+	    this.head=175;
+	  }
+       var people = new person();
+       alert(people.name);
+       alert(JSON.stringify(people));//显示所有信息
+*/
+
+/*
+ //数组
+ 		var  arr =["abc",1,"你好"];
+ 		var art=new Array(10,20);//数组
+ 		// art[0]=3;
+ 		// art[5]=6;
+ 		alert(art);
+ 		alert(art.length);
+*/
+
+
+	/**/
+		//  函数  不规定类型  没有重载    ,小括号代表立即执行
+		//  1  //a(3,6);
+		// function a(i,j){//传参
+			
+		// 	alert(j);
+
+		// }
+		// function a(i){
+		// 	alert(i);
+			// }
+
+
+
+
+  //   2.
+  //       	var a = function(){
+		// 	alert("d");
+		// }	a();
+		
+
+       //3.  大括号括住，解决同名问题
+    
+
+
+   /*//.1  
+
+    var getTime = function(){
+				alert("1999-01-01");
+
+			};
+
+      var getTime=function(){
+               alert("1999-01-02")
+			};
+
+       getTime();
+*/
+
+
+/*
+	var  cheng= (function(){
+           
+			var getTime = function(){
+				alert("1999-01-01");
+
+			};
+
+			var gitDD= function(){
+					alert("DDD");
+			};
+
+			var  c= function(){
+
+			};
+
+var abc={
+"getTime":getTime,
+"gitDD":gitDD,
+"c":c
+
+};
+			return  abc;
+		}	
+  )();
+  	cheng.getTime();
+
+
+		var chengyv =(function(){
+		
+			var getTime=function(){
+               alert("1999-01-02")
+			};
+
+			var gitDD= function(){
+					alert("ddd");
+			};
+
+			var  c= function(){
+
+			};
+
+var abc={
+"getTime":getTime,
+"gitDD":gitDD,
+"c":c
+};
+		return  abc;
+			}
+
+)();
+    chengyv.getTime();
+	*/
+
+
+// dom doucument obeject modal    
+  //document.getElementById("first");
+
+ // var ids =document.getElementById("first");
+ //   alert(ids);
+
+
+/**/     //javascript api
+ //.1
+ 
+   window.onload=function(){  //window对象表示浏览器中打开的窗口
+ 
+    // var ids =document.getElementById("first");
+    //  var divs = document.getElementByTagName("abc");
+
+      var ids =document.getElementByTagName("first");
+     divs[0].style.background-color="yellow";
+
+    alert(divs.length);
+
+   };
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+	<div name="abc"  id="first" style="width: 200px;height: 600px;background-color: #aaa">aaaa</div>
+	<div name="abd" >bbb</div>
+	<div  name="abe">nnnn</div>
+	<div  name="abr">mmmm</div>
+
+
+
+	</script>
+</body>
+</html>
