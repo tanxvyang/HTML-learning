@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript03</title>
+
+	<script>
+	var gotoLeft =function(){
+
+		var moveDivs=	document.getElementsByName("moveDiv");
+		var moveDiv = moveDivs[0];
+		var top = moveDiv.style.margingTop;
+		var margingTop= parseInt(top)+5+"px";
+
+
+		
+
+
+		var  left =moveDiv.style.margingLeft;
+         var margingLeft= parseInt(left)+5+"px";
+          moveDiv.style.margingLeft = margingLeft;
+
+           moveDiv.style.margingTop = margingTop;
+
+}
+
+
+
+		//alert(typeof(top));
+
+		//moveDiv.style.margingTop = moveDiv.style.margingTop+2+"px";
+	
+
+
+
+
+/*
+setTimeout();延时器
+setInterval();定时器
+*/
+
+
+		//setTimeout("alert('你好')",500);
+	//	setInterval("alert('你好')",500);
+
+      //setInterval("gotoLeft()",1000);
+      
+
+
+
+      /*
+      var date= new Date();
+      alert(date.getFullYear());  //年，月，日，星期
+      alert(date.getMonth());
+       alert(date.getDate());
+       alert(date.getDay());
+  alert(date.getHours());
+  alert(date.getMinutes());
+  alert(date.getSecons());
+*/ 
+
+
+
+		
+
+var getDateStr = function(){
+	var  date =new Date();
+	return date.getFullYear()+"年"+date.getMonth()+"月"+date.getDate()+"日"+date.getHours()+"时"+date.getMinutes()+"分"+date.getSecons()+"秒";
+}
+
+var clock =function(){
+			var   moveDivs=	document.getElementsByName("moveDiv");
+			var moveDiv=moveDivs[0];
+			moveDiv.innerHTML = getDateStr();
+		}
+
+	var bindEvent = function(){
+				var moveAs =document.getElementsByName("moveA");
+				var moveA = moveAs[0];
+				moveA.onclick =function()
+				//moveA.onclick="gotoLeft()";
+
+			}
+
+		// var date2 =new Date("2018-4-29");
+		// alert(date2.getDay());
+
+
+	// var delay = function(){
+	// 	for (var i = 0; i <1000; i++) {
+			
+	// 	}
+	// 	gotoLeft();
+	// }
+
+	// var doMove =function(){
+	// 	for (var i = 0; i <100; i++) {
+	// 		delay();
+	// 	}
+
+	// }
+	// 
+ window.onclick=function(){
+		bindEvent();
+	}
+	</script>
+</head>
+
+<body>
+
+	<div name="moveDiv" style="width: 200px;height: 200px;margin-top: 50px;margin-left: 50px;
+	background-color: yellow">
+	</div>
+
+	<!--<a href="#" onclick="gotoLeft()">移动</a>-->
+
+
+</body>
+</html>
